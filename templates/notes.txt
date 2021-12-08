@@ -1,0 +1,10 @@
+No info                         8345
+In-flight meal not included     1982
+No check-in baggage included     320
+1 Long layover                    19
+Change airports                    7
+Business class                     4
+No Info                            3
+1 Short layover                    1
+2 Long layover                     1
+Red-eye flight                     1

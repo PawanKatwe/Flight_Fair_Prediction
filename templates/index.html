@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Flight fair prediction</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/prediction", method="post">
+            <div class="container">
+                <div class="row">
+
+                    <!-- select the airline compan-->
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                        <label  class="form-label">Select Airline company</label>
+                        <select id="airline" class="form-select" name="Airline">
+                            <option>Jet Airways</option>
+                            <option>IndiGo</option>
+                            <option>Air India</option>
+                            <option>Multiple carriers</option>
+                            <option>SpiceJet</option>
+                            <option>Vistara</option>
+                            <option>Air Asia</option>
+                            <option>GoAir</option>
+                            <option>194
+                                Multiple carriers Premium economy</option>
+                            <option>Jet Airways Business</option>
+                            <option>Vistara Premium economy</option>
+                            <option>Trujet</option>
+                        </select>
+                    </div>
+                    </div>
+                    </div>
+                    <!-- select the source-->
+
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                        <label class="form-label">Select source</label>
+                        <select id="source" class="form-select" name='Source'>
+                            <option>Delhi</option>
+                            <option>Kolkata</option>
+                            <option>Banglore</option>
+                            <option>Mumbai</option>
+                            <option>Chennai</option>
+                        </select>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- select the destination-->
+
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                        <label class="form-label">destination</label>
+                        <select id="destination" class="form-select" name='Destination'>
+                            <option>Cochin</option>
+                            <option>Banglore</option>
+                            <option>Delhi</option>
+                            <option>New Delhi</option>
+                            <option>Hyderabad</option>
+                            <option>Kolkata</option>
+                        </select>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+
+                    <!-- slect the number of stops-->
+                    
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                        <label  class="form-label">select stops</label>
+                        <select id="stops" class="form-select" name='Total_Stops'>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Select departure time-->
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                        <label  class="form-label">Departure Time</label>
+                        <input class="form-control" type="time" id="departure" name="Dep_Time" value="24:00" max="24" required>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Select duration-->
+
+                    <div class="col-sm-4">
+                        <div class='card'>
+                            <div class="card-body">
+                        <div class="container">
+                            <div class="row justify-content-md-center">
+                                <label for="inputState" class="col-form-label">Duration</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="row">
+
+                                        <div class="col-8 col-sm-6">
+                                            <label for="hours" class="col-form-label">Hours
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <input class="form-control" type='number' id="hours" min="0" max="72"
+                                                name="hours" required>
+                                        </div>
+                                        <div class="col-8 col-sm-6">
+                                            <label for="min" class="form-label">Min</label>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <input class="form-control" type='number' id="min" min="0" max="59"
+                                                name="min" required>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                    <label class="form-label">Date of journey</label><br>
+                    <input type="date" id="date" required name='Date_of_Journey'> 
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <div class='card'>
+                            <div class="card-body">
+                    <label  class="form-label">additional info</label>
+                    <select id="additionalinfo" class="form-select" required name='Additional_Info'>
+                        <option>No Info </option>
+                        <option>In-flight meal not included</option>
+                        <option>No check-in baggage included</option>
+                        <option>1 Long layover</option>
+                        <option>Change airports</option>
+                        <option>Business class</option>
+                        <option>1 Short layover</option>
+                        <option>2 Long layover</option>
+                        <option>Red-eye flight</option>
+
+                    </select>
+                    </div>
+                    </div>
+
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+            <div clsss="container">
+                <div class="row">
+                    <div class="card text-center">
+                        <div class="card-body">
+                             <!-- Submit -->
+                             <input type="submit" value="Submit" class="btn btn-secondary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+    </div>
+
+
+
+    </form>
+
+    </div>
+</body>
